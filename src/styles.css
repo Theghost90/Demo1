@@ -994,73 +994,28 @@ a.lang__item:hover {
 
 /* ---------- Terms ------------------------------------------------------- */
 
-.terms__grid {
+.checks {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: clamp(40px, 6vw, 88px);
-  align-items: start;
-}
-.terms__col {
-  padding-top: 29px;
-  border-top: 3px solid var(--ink);
-}
-.terms__col h3 {
-  margin-bottom: 20px;
-  font: 500 clamp(1.75rem, 2.6vw, 2.125rem) / 1.1 var(--serif);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(40px, 6vw, 88px);
+  border-bottom: 1px solid #cfc8b6;
 }
 .checks li {
   position: relative;
-  padding: 16px 0 16px 36px;
+  padding: 18px 0 18px 36px;
   border-top: 1px solid #cfc8b6;
   line-height: 1.6;
-}
-.checks li:last-child {
-  border-bottom: 1px solid #cfc8b6;
 }
 .checks li::before {
   content: "";
   position: absolute;
   left: 6px;
-  top: 21px;
+  top: 24px;
   width: 7px;
   height: 13px;
   border: solid var(--accent);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-}
-
-.ai-card {
-  padding: 32px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-top: 3px solid var(--accent);
-}
-.ai-card h3 {
-  font: 500 clamp(1.75rem, 2.6vw, 2.125rem) / 1.1 var(--serif);
-}
-.ai-card__lead {
-  margin-top: 12px;
-  color: var(--ink-2);
-  font-size: 1.0625rem;
-}
-.ai-card ul {
-  margin-top: 20px;
-}
-.ai-card li {
-  position: relative;
-  padding: 14px 0 14px 22px;
-  border-top: 1px solid var(--line);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-}
-.ai-card li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 26px;
-  width: 10px;
-  height: 1px;
-  background: var(--accent);
 }
 
 /* ---------- Contact ----------------------------------------------------- */
@@ -1276,8 +1231,8 @@ a.lang__item:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .deliv__grid,
-  .terms__grid,
-  .contact__grid {
+  .contact__grid,
+  .checks {
     grid-template-columns: minmax(0, 1fr);
   }
   .standards {
@@ -1383,7 +1338,6 @@ a.lang__item:hover {
     flex: 1 1 100%;
   }
   .standards,
-  .ai-card,
   .callout {
     padding: 24px;
   }

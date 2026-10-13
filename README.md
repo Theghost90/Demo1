@@ -64,6 +64,8 @@ LinkedIn link previews), `sitemap.xml` and `robots.txt`. Without it those tags a
 
 ## Things to know
 
+- **AI wording is blocked at build time.** Nothing about AI may appear on the client-facing site (owner rule, see
+  `CLAUDE.md`). The build fails if it finds any in the content or the rendered pages.
 - **Contact is `mailto:` only.** A static site cannot send email. If you want an on-page form, it needs a form service
   or a small backend.
 - **Content-Security-Policy** is set via a `<meta>` tag (`script-src 'self'` plus one hashed inline snippet). If you

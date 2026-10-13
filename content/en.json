@@ -118,8 +118,8 @@
         "tagline": "How the strategy gets built, run and sold.",
         "items": [
           {
-            "title": "Digital Transformation & AI Integration",
-            "text": "Adopting digital and AI solutions where they add measurable value, and only there."
+            "title": "Digital Transformation",
+            "text": "Adopting digital solutions where they add measurable value, and only there."
           },
           {
             "title": "Product Ownership & Management",
@@ -295,8 +295,7 @@
   "terms": {
     "eyebrow": "Working terms",
     "title": "How an engagement is governed.",
-    "intro": "Clear terms up front, and a clear position on AI.",
-    "engagementTitle": "Terms of engagement",
+    "intro": "Clear terms up front, so every engagement starts on the same footing.",
     "engagement": [
       "Scope, fees and deliverables are agreed in writing before any work begins.",
       "Conflicts of interest are disclosed before an engagement is accepted.",
@@ -304,17 +303,7 @@
       "Client work is published only with the client’s written consent.",
       "I comply with applicable laws and regulations in Cameroon, across Africa and internationally.",
       "My assessments are honest: I flag uncertainty and never over-promise on capabilities or outcomes."
-    ],
-    "ai": {
-      "title": "AI-assisted. Human-validated.",
-      "text": "AI is a high-performance working partner in my practice, not a replacement for strategic judgment.",
-      "points": [
-        "It accelerates research synthesis, drafting, structuring and analysis.",
-        "I review, refine and validate every AI-assisted output before it reaches a client.",
-        "Client data is anonymized or handled under applicable confidentiality terms before it touches an AI tool.",
-        "Your context and local market knowledge always override generic AI output."
-      ]
-    }
+    ]
   },
   "contact": {
     "eyebrow": "Contact",

@@ -397,21 +397,9 @@ function terms(c) {
   return `<section class="section section--alt" id="terms" aria-labelledby="terms-title">
       <div class="container">
         ${sectionHead(t, 'terms')}
-        <div class="terms__grid">
-          <div class="terms__col" data-reveal>
-            <h3>${esc(t.engagementTitle)}</h3>
-            <ul class="checks">
-              ${t.engagement.map((x) => `<li>${esc(x)}</li>`).join('\n              ')}
-            </ul>
-          </div>
-          <div class="ai-card" data-reveal>
-            <h3>${esc(t.ai.title)}</h3>
-            <p class="ai-card__lead">${esc(t.ai.text)}</p>
-            <ul>
-              ${t.ai.points.map((x) => `<li>${esc(x)}</li>`).join('\n              ')}
-            </ul>
-          </div>
-        </div>
+        <ul class="checks" data-reveal>
+          ${t.engagement.map((x) => `<li>${esc(x)}</li>`).join('\n          ')}
+        </ul>
       </div>
     </section>`;
 }

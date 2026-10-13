@@ -118,8 +118,8 @@
         "tagline": "Comment la stratégie se construit, s’exploite et se vend.",
         "items": [
           {
-            "title": "Transformation digitale et intégration de l’IA",
-            "text": "Adopter le digital et l’IA là où ils créent une valeur mesurable, et seulement là."
+            "title": "Transformation digitale",
+            "text": "Adopter le digital là où il crée une valeur mesurable, et seulement là."
           },
           {
             "title": "Product Ownership et gestion de produit",
@@ -295,8 +295,7 @@
   "terms": {
     "eyebrow": "Cadre de travail",
     "title": "Comment une mission est encadrée.",
-    "intro": "Des conditions claires dès le départ, et une position claire sur l’IA.",
-    "engagementTitle": "Conditions d’engagement",
+    "intro": "Des conditions claires dès le départ, pour que chaque mission démarre sur des bases communes.",
     "engagement": [
       "Le périmètre, les honoraires et les livrables sont convenus par écrit avant tout démarrage.",
       "Tout conflit d’intérêts est signalé avant l’acceptation d’une mission.",
@@ -304,17 +303,7 @@
       "Les travaux réalisés pour un client ne sont publiés qu’avec son accord écrit.",
       "Je respecte les lois et règlements applicables au Cameroun, en Afrique et à l’international.",
       "Mes évaluations sont honnêtes : je signale les incertitudes et ne promets jamais plus que mes capacités ou les résultats ne le permettent."
-    ],
-    "ai": {
-      "title": "Assisté par l’IA. Validé par l’humain.",
-      "text": "L’IA est un partenaire de travail très performant dans ma pratique, pas un substitut au jugement stratégique.",
-      "points": [
-        "Elle accélère la synthèse de recherches, la rédaction, la structuration et l’analyse.",
-        "Chaque production assistée par l’IA est relue, affinée et validée par mes soins avant d’arriver chez un client.",
-        "Les données client sont anonymisées ou traitées dans le cadre de conditions de confidentialité applicables avant tout usage d’un outil d’IA.",
-        "Votre contexte et ma connaissance du marché local priment toujours sur une réponse d’IA générique."
-      ]
-    }
+    ]
   },
   "contact": {
     "eyebrow": "Contact",

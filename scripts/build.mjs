@@ -46,6 +46,26 @@ function assertSameShape(a, b, labelA, labelB) {
   }
 }
 
+// Owner rule (permanent): nothing about AI may reach clients through any channel.
+// Fail the build instead of relying on anyone remembering it.
+const AI_WORDING = [
+  /\b(AI|IA|A\.I\.|GPT|LLMs?)\b/,
+  /\b(artificial intelligence|intelligence artificielle|machine learning|apprentissage automatique|ChatGPT|generative|générative|chatbots?)\b/i,
+];
+const findAiWording = (text) => AI_WORDING.some((re) => re.test(text));
+
+function assertNoAiWording(value, label, path = '') {
+  if (typeof value === 'string') {
+    if (findAiWording(value)) {
+      throw new Error(`AI wording is not allowed in client-facing content (${label}, ${path}): "${value}"`);
+    }
+  } else if (Array.isArray(value)) {
+    value.forEach((v, i) => assertNoAiWording(v, label, `${path}[${i}]`));
+  } else if (value && typeof value === 'object') {
+    for (const [k, v] of Object.entries(value)) assertNoAiWording(v, label, path ? `${path}.${k}` : k);
+  }
+}
+
 // French typography: no-break space before : and thin no-break space before ; ? !
 const NBSP = ' ';
 const NNBSP = ' ';
@@ -71,6 +91,8 @@ function frenchTypography(value, key = '') {
 const en = await readJson('en.json');
 const fr = await readJson('fr.json');
 assertSameShape(en, fr, 'en.json', 'fr.json');
+assertNoAiWording(en, 'en.json');
+assertNoAiWording(fr, 'fr.json');
 const pages = [
   { content: en, out: 'index.html', prefix: '', altHref: 'fr/' },
   { content: frenchTypography(fr), out: 'fr/index.html', prefix: '../', altHref: '../' },
@@ -104,6 +126,7 @@ for (const page of pages) {
     altHref: page.altHref,
     alt: { ogLocale: alt.ogLocale },
   });
+  if (findAiWording(html)) throw new Error(`AI wording found in rendered ${page.out}`);
   const target = join(dist, page.out);
   await mkdir(dirname(target), { recursive: true });
   await writeFile(target, html);
