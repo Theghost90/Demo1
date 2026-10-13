@@ -1,0 +1,337 @@
+{
+  "lang": "en",
+  "ogLocale": "en_US",
+  "meta": {
+    "title": "Joseph Franck Onambele-Bekono | Independent Business Consultant, Douala",
+    "description": "Independent business consultant in strategy, digital transformation and finance, advising executives across Cameroon, Africa and international markets.",
+    "siteName": "Joseph Franck Onambele-Bekono",
+    "ogImage": "og.png"
+  },
+  "person": {
+    "name": "Joseph Franck Onambele-Bekono",
+    "brandShort": "J. F. Onambele-Bekono",
+    "initials": "JF",
+    "role": "Independent Business Consultant",
+    "email": "onambelebekono@gmail.com",
+    "city": "Douala",
+    "country": "Cameroon",
+    "countryCode": "CM"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "backToTop": "Back to top",
+    "copy": "Copy email",
+    "copied": "Copied",
+    "copyFailed": "Select and copy",
+    "langSwitchLabel": "Language",
+    "thisLang": { "code": "en", "short": "EN", "name": "English" },
+    "otherLang": { "code": "fr", "short": "FR", "name": "Français", "aria": "Lire ce site en français" }
+  },
+  "nav": {
+    "items": [
+      { "id": "expertise", "label": "Expertise" },
+      { "id": "approach", "label": "Approach" },
+      { "id": "process", "label": "Process" },
+      { "id": "clients", "label": "Clients" },
+      { "id": "deliverables", "label": "Deliverables" }
+    ],
+    "cta": { "id": "contact", "label": "Get in touch" }
+  },
+  "hero": {
+    "eyebrow": "Independent Business Consultant · Douala, Cameroon",
+    "headline": "I turn ambiguous business problems into *executable strategy.*",
+    "lede": "I advise founders, SMEs, enterprises and public-sector leaders in strategy, digital transformation and finance. I define the real problem first, build the strategy second, then recommend solutions, with or without technology, that create lasting value.",
+    "ctaPrimary": { "label": "Discuss an engagement", "id": "contact" },
+    "ctaSecondary": { "label": "See how I work", "id": "process" },
+    "methodLabel": "Core method",
+    "method": ["Diagnose", "Strategize", "Recommend", "Plan", "Deliver", "Review"],
+    "glance": {
+      "title": "At a glance",
+      "items": [
+        { "label": "Focus", "value": "Strategy · Digital Transformation · Finance" },
+        { "label": "Based in", "value": "Douala, Cameroon" },
+        { "label": "Markets", "value": "Africa and international" },
+        { "label": "Works with", "value": "Founders, SMEs, enterprises, public sector" },
+        { "label": "Languages", "value": "English · French" }
+      ]
+    }
+  },
+  "brief": {
+    "label": "In brief",
+    "items": [
+      {
+        "title": "Who I serve",
+        "text": "Founders, startups and SMEs first; also large enterprises and public-sector bodies. My counterparts are typically the Board, CEO, CTO, CFO or COO."
+      },
+      {
+        "title": "What I do",
+        "text": "I define the real business problem, build the strategy, and recommend prioritized, executable solutions across strategy, finance, product and digital transformation."
+      },
+      {
+        "title": "How I work",
+        "text": "Diagnosis before prescription, strategy before solution, and every recommendation tied to long-term, measurable value."
+      }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Expertise",
+    "title": "Nine domains, organized around three questions.",
+    "intro": "Where should the business go? How is the ambition funded and structured? How does the strategy get built, run and sold?",
+    "pillars": [
+      {
+        "name": "Strategy & Advisory",
+        "tagline": "Where the business should go, and why.",
+        "items": [
+          {
+            "title": "Business Strategy & Management",
+            "text": "From vision and positioning to strategic pillars, objectives, KPIs and an action plan."
+          },
+          {
+            "title": "Corporate Advisory",
+            "text": "Independent counsel for boards and executives on the decisions that shape the company."
+          },
+          {
+            "title": "Business Analysis & Requirements Engineering",
+            "text": "Turning business needs into clear, testable requirements that delivery teams can build against."
+          }
+        ]
+      },
+      {
+        "name": "Finance",
+        "tagline": "How the ambition is funded and structured.",
+        "items": [
+          {
+            "title": "Trade Finance Instruments",
+            "text": "Selecting and structuring the instruments that secure and finance trade transactions."
+          },
+          {
+            "title": "Project Finance & Corporate Finance",
+            "text": "Financial structuring and decision support, for individual projects and for the company as a whole."
+          }
+        ]
+      },
+      {
+        "name": "Digital, Product & Growth",
+        "tagline": "How the strategy gets built, run and sold.",
+        "items": [
+          {
+            "title": "Digital Transformation & AI Integration",
+            "text": "Adopting digital and AI solutions where they add measurable value, and only there."
+          },
+          {
+            "title": "Product Ownership & Management",
+            "text": "Agile / Scrum product leadership, with a backlog aligned to business value and strategy."
+          },
+          {
+            "title": "Process Optimization & Operational Excellence",
+            "text": "Removing friction and cost from the way work gets done."
+          },
+          {
+            "title": "Product Marketing & Sales Enablement",
+            "text": "Positioning, messaging and tools that help sales teams win."
+          }
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "title": "Eleven sectors, one consistent method.",
+    "intro": "Sector context shapes the diagnosis. It never replaces it.",
+    "items": [
+      "Technology & Communications",
+      "Retail & Consumer Goods",
+      "Home & Field Services (HomeTech / FSM)",
+      "Healthcare & Life Sciences",
+      "Energy, Utilities & Climate Tech",
+      "Food & Agriculture (Agtech)",
+      "Travel, Hospitality & Leisure",
+      "Education Technology (Edtech)",
+      "Professional & Language Services",
+      "Financial Services (Fintech)",
+      "Real Estate & Construction"
+    ]
+  },
+  "statement": {
+    "eyebrow": "What I bring",
+    "quote": "I bring both the hard-skill rigor of a business analyst and the soft-skill authority of a strategic advisor, closing the gap between where a business is and where it needs to be.",
+    "attribution": "Joseph Franck Onambele-Bekono"
+  },
+  "approach": {
+    "eyebrow": "Approach",
+    "title": "Six principles on every engagement.",
+    "intro": "They apply whatever the sector, and whatever the size of the client.",
+    "principles": [
+      {
+        "title": "Diagnosis first",
+        "text": "I never prescribe before I understand. Every engagement starts with deep discovery: context, stakeholders, data and constraints."
+      },
+      {
+        "title": "Strategy before solution",
+        "text": "I build the strategy first, then recommend solutions aligned to it. Never the reverse."
+      },
+      {
+        "title": "Sustainable value",
+        "text": "Every recommendation must create long-term, measurable business value."
+      },
+      {
+        "title": "Plain language",
+        "text": "Complex analysis, translated into clear, decision-ready language for executives."
+      },
+      {
+        "title": "Integrity & objectivity",
+        "text": "Findings presented honestly, even when they are uncomfortable. I have no agenda beyond the client’s success."
+      },
+      {
+        "title": "Confidentiality",
+        "text": "All client information is strictly confidential unless disclosure is explicitly authorized."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "Six phases, each ending in a defined deliverable.",
+    "intro": "Every engagement follows the same lifecycle, so progress is visible and decisions are documented.",
+    "activitiesLabel": "Key activities",
+    "outputLabel": "Key output",
+    "phases": [
+      {
+        "title": "Discovery & Diagnosis",
+        "activities": ["Stakeholder interviews", "Context analysis", "Problem framing"],
+        "outputs": ["Discovery Report", "Problem Statement"]
+      },
+      {
+        "title": "Strategy Design",
+        "activities": ["Market analysis", "Business strategy", "Opportunity mapping"],
+        "outputs": ["Strategic Brief", "Business Strategy Document"]
+      },
+      {
+        "title": "Solution Architecture",
+        "activities": ["Solution design", "Roadmap", "Feasibility assessment"],
+        "outputs": ["Solution Framework", "Business Case"]
+      },
+      {
+        "title": "Planning & Alignment",
+        "activities": ["Work breakdown", "Prioritization", "Stakeholder alignment"],
+        "outputs": ["Project Plan", "Alignment Guide", "RACI"]
+      },
+      {
+        "title": "Execution & Oversight",
+        "activities": ["Implementation support", "Sprint facilitation", "Progress tracking"],
+        "outputs": ["Status Reports", "Dashboards"]
+      },
+      {
+        "title": "Review & Optimization",
+        "activities": ["KPI review", "Lessons learned", "Continuous improvement"],
+        "outputs": ["Performance Report", "Optimization Plan"]
+      }
+    ],
+    "agile": {
+      "title": "Agile / Scrum, where it fits",
+      "text": "For product development, digital transformation and other iterative work, I apply Scrum: defined sprints, backlog prioritization, sprint reviews and retrospectives. As Product Owner or Scrum Coach, I keep the backlog aligned to business value and strategy."
+    }
+  },
+  "clients": {
+    "eyebrow": "Clients",
+    "title": "I work with the people accountable for the outcome.",
+    "intro": "From a first venture to a business in transformation, in Cameroon, across Africa and beyond.",
+    "rows": [
+      { "label": "Segment", "value": "Solo founders, startups and SMEs (primary) · Large enterprises · Public sector" },
+      { "label": "Geography", "value": "Cameroon and Sub-Saharan Africa (primary) · International clients" },
+      { "label": "Counterparts", "value": "Board members and C-suite (CEO, CTO, CFO, COO) · Executive directors" },
+      { "label": "Business model", "value": "B2B and B2C · Product and service businesses" }
+    ],
+    "maturity": {
+      "label": "Stage of the business",
+      "steps": ["Pre-revenue", "Growth", "Established", "Transformation"]
+    }
+  },
+  "deliverables": {
+    "eyebrow": "Deliverables",
+    "title": "Documents built for decision-makers.",
+    "intro": "Conclusion first, clearly structured, and ready to use without rework.",
+    "items": [
+      {
+        "title": "Business proposals & reports",
+        "text": "Executive summary, structured sections, clear recommendations."
+      },
+      {
+        "title": "Presentations & decks",
+        "text": "Story-driven and visual-first, with one idea per slide."
+      },
+      {
+        "title": "Market & competitor research",
+        "text": "Insight-led, data-backed, with findings you can act on."
+      },
+      {
+        "title": "Planning & alignment documents",
+        "text": "Clear scope, milestones, RACI, and risks flagged early."
+      },
+      {
+        "title": "Visual charts & matrices",
+        "text": "RACI, roadmaps, Gantt, prioritization matrices and Kanban."
+      },
+      {
+        "title": "Strategic communication guides",
+        "text": "Messaging frameworks, talking points and escalation protocols."
+      },
+      {
+        "title": "Prioritized work lists",
+        "text": "MoSCoW or WSJF-weighted, with an owner assigned and a clear deadline."
+      }
+    ],
+    "standardsTitle": "Standards every document meets",
+    "standards": [
+      "Recommendation first. Every formal document opens with an executive summary.",
+      "Every recommendation is tied to the client’s strategy and states its expected business impact.",
+      "Impact is quantified wherever the data allows: percentages, timelines, revenue and cost.",
+      "Research cites its sources, flags data quality and separates facts from estimates.",
+      "Proofread rigorously, with zero tolerance for typos. Delivered in English, or in French for Francophone clients."
+    ]
+  },
+  "terms": {
+    "eyebrow": "Working terms",
+    "title": "How an engagement is governed.",
+    "intro": "Clear terms up front, and a clear position on AI.",
+    "engagementTitle": "Terms of engagement",
+    "engagement": [
+      "Scope, fees and deliverables are agreed in writing before any work begins.",
+      "Conflicts of interest are disclosed before an engagement is accepted.",
+      "Client information is strictly confidential and never shared with third parties without written consent.",
+      "Client work is published only with the client’s written consent.",
+      "I comply with applicable laws and regulations in Cameroon, across Africa and internationally.",
+      "My assessments are honest: I flag uncertainty and never over-promise on capabilities or outcomes."
+    ],
+    "ai": {
+      "title": "AI-assisted. Human-validated.",
+      "text": "AI is a high-performance working partner in my practice, not a replacement for strategic judgment.",
+      "points": [
+        "It accelerates research synthesis, drafting, structuring and analysis.",
+        "I review, refine and validate every AI-assisted output before it reaches a client.",
+        "Client data is anonymized or handled under applicable confidentiality terms before it touches an AI tool.",
+        "Your context and local market knowledge always override generic AI output."
+      ]
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let’s start with the problem.",
+    "text": "Describe the business problem, the decision in front of you, or the ambition you want to pursue. We start with the diagnosis.",
+    "emailLabel": "Write to me",
+    "mailSubject": "Engagement inquiry",
+    "mailBody": "Context (one or two sentences):\n\nWhat I need help with:\n\nTimeline and the next step I am looking for:\n",
+    "mailCta": "Send an email",
+    "details": [
+      { "label": "Based in", "value": "Douala, Cameroon" },
+      { "label": "Working languages", "value": "English · French" },
+      { "label": "Markets", "value": "Africa and international" }
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "line": "Independent Business Consultant · Douala, Cameroon"
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "lang": "fr",
+  "ogLocale": "fr_FR",
+  "meta": {
+    "title": "Joseph Franck Onambele-Bekono | Consultant indépendant en stratégie, Douala",
+    "description": "Consultant indépendant en stratégie d’entreprise, transformation digitale et finance, au service des dirigeants au Cameroun, en Afrique et à l’international.",
+    "siteName": "Joseph Franck Onambele-Bekono",
+    "ogImage": "og-fr.png"
+  },
+  "person": {
+    "name": "Joseph Franck Onambele-Bekono",
+    "brandShort": "J. F. Onambele-Bekono",
+    "initials": "JF",
+    "role": "Consultant indépendant",
+    "email": "onambelebekono@gmail.com",
+    "city": "Douala",
+    "country": "Cameroun",
+    "countryCode": "CM"
+  },
+  "ui": {
+    "skip": "Aller au contenu",
+    "menu": "Menu",
+    "closeMenu": "Fermer le menu",
+    "mainNav": "Navigation principale",
+    "backToTop": "Haut de page",
+    "copy": "Copier l’e-mail",
+    "copied": "Copié",
+    "copyFailed": "Sélectionner et copier",
+    "langSwitchLabel": "Langue",
+    "thisLang": { "code": "fr", "short": "FR", "name": "Français" },
+    "otherLang": { "code": "en", "short": "EN", "name": "English", "aria": "Read this site in English" }
+  },
+  "nav": {
+    "items": [
+      { "id": "expertise", "label": "Expertise" },
+      { "id": "approach", "label": "Approche" },
+      { "id": "process", "label": "Méthode" },
+      { "id": "clients", "label": "Clients" },
+      { "id": "deliverables", "label": "Livrables" }
+    ],
+    "cta": { "id": "contact", "label": "Me contacter" }
+  },
+  "hero": {
+    "eyebrow": "Consultant indépendant · Douala, Cameroun",
+    "headline": "Je transforme des problématiques d’entreprise ambiguës en *stratégie exécutable.*",
+    "lede": "J’accompagne fondateurs, PME, grandes entreprises et dirigeants du secteur public en stratégie, transformation digitale et finance. Je définis d’abord le véritable problème, je construis ensuite la stratégie, puis je recommande des solutions, avec ou sans technologie, qui créent une valeur durable.",
+    "ctaPrimary": { "label": "Discuter d’une mission", "id": "contact" },
+    "ctaSecondary": { "label": "Voir ma méthode", "id": "process" },
+    "methodLabel": "Méthode",
+    "method": ["Diagnostiquer", "Élaborer la stratégie", "Recommander", "Planifier", "Livrer", "Évaluer"],
+    "glance": {
+      "title": "Aperçu",
+      "items": [
+        { "label": "Domaines", "value": "Stratégie · Transformation digitale · Finance" },
+        { "label": "Localisation", "value": "Douala, Cameroun" },
+        { "label": "Marchés", "value": "Afrique et international" },
+        { "label": "Clients", "value": "Fondateurs, PME, grandes entreprises, secteur public" },
+        { "label": "Langues", "value": "Anglais · Français" }
+      ]
+    }
+  },
+  "brief": {
+    "label": "En bref",
+    "items": [
+      {
+        "title": "Qui j’accompagne",
+        "text": "Fondateurs, startups et PME en priorité ; également grandes entreprises et institutions publiques. Mes interlocuteurs sont généralement le conseil d’administration, la direction générale, le CTO, le DAF ou le COO."
+      },
+      {
+        "title": "Ce que je fais",
+        "text": "Je définis le véritable problème d’entreprise, je construis la stratégie, puis je recommande des solutions priorisées et exécutables, en stratégie, finance, produit et transformation digitale."
+      },
+      {
+        "title": "Comment je travaille",
+        "text": "Le diagnostic avant la prescription, la stratégie avant la solution, et chaque recommandation reliée à une valeur durable et mesurable."
+      }
+    ]
+  },
+  "expertise": {
+    "eyebrow": "Expertise",
+    "title": "Neuf domaines, organisés autour de trois questions.",
+    "intro": "Où l’entreprise doit-elle aller ? Comment l’ambition est-elle financée et structurée ? Comment la stratégie se construit-elle, s’exploite-t-elle et se vend-elle ?",
+    "pillars": [
+      {
+        "name": "Stratégie et conseil",
+        "tagline": "Où l’entreprise doit aller, et pourquoi.",
+        "items": [
+          {
+            "title": "Stratégie d’entreprise et management",
+            "text": "De la vision et du positionnement aux piliers stratégiques, objectifs, KPI et plan d’action."
+          },
+          {
+            "title": "Conseil aux entreprises",
+            "text": "Un regard indépendant, auprès des conseils d’administration et des dirigeants, sur les décisions qui façonnent l’entreprise."
+          },
+          {
+            "title": "Analyse métier et ingénierie des exigences",
+            "text": "Traduire les besoins de l’entreprise en exigences claires et testables, sur lesquelles les équipes peuvent construire."
+          }
+        ]
+      },
+      {
+        "name": "Finance",
+        "tagline": "Comment l’ambition est financée et structurée.",
+        "items": [
+          {
+            "title": "Instruments de financement du commerce",
+            "text": "Choisir et structurer les instruments (trade finance) qui sécurisent et financent les opérations commerciales."
+          },
+          {
+            "title": "Financement de projets et finance d’entreprise",
+            "text": "Structuration financière et aide à la décision, pour chaque projet comme pour l’entreprise dans son ensemble."
+          }
+        ]
+      },
+      {
+        "name": "Digital, produit et croissance",
+        "tagline": "Comment la stratégie se construit, s’exploite et se vend.",
+        "items": [
+          {
+            "title": "Transformation digitale et intégration de l’IA",
+            "text": "Adopter le digital et l’IA là où ils créent une valeur mesurable, et seulement là."
+          },
+          {
+            "title": "Product Ownership et gestion de produit",
+            "text": "Pilotage produit Agile / Scrum, avec un backlog aligné sur la valeur métier et la stratégie."
+          },
+          {
+            "title": "Optimisation des processus et excellence opérationnelle",
+            "text": "Retirer les frictions et les coûts de la manière dont le travail se réalise."
+          },
+          {
+            "title": "Marketing produit et Sales Enablement",
+            "text": "Positionnement, messages et outils qui aident les équipes commerciales à gagner."
+          }
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Secteurs",
+    "title": "Onze secteurs, une seule méthode.",
+    "intro": "Le contexte sectoriel nourrit le diagnostic. Il ne s’y substitue jamais.",
+    "items": [
+      "Technologie et communications",
+      "Commerce de détail et biens de consommation",
+      "Services à domicile et sur le terrain (HomeTech / FSM)",
+      "Santé et sciences de la vie",
+      "Énergie, services publics et technologies du climat",
+      "Agroalimentaire et agriculture (Agtech)",
+      "Voyage, hôtellerie et loisirs",
+      "Technologies de l’éducation (Edtech)",
+      "Services professionnels et linguistiques",
+      "Services financiers (Fintech)",
+      "Immobilier et construction"
+    ]
+  },
+  "statement": {
+    "eyebrow": "Ma valeur ajoutée",
+    "quote": "J’apporte à la fois la rigueur technique d’un analyste métier et l’autorité relationnelle d’un conseiller stratégique, pour combler l’écart entre la situation actuelle d’une entreprise et celle qu’elle doit atteindre.",
+    "attribution": "Joseph Franck Onambele-Bekono"
+  },
+  "approach": {
+    "eyebrow": "Approche",
+    "title": "Six principes dans chaque mission.",
+    "intro": "Ils s’appliquent quel que soit le secteur, et quelle que soit la taille du client.",
+    "principles": [
+      {
+        "title": "Le diagnostic d’abord",
+        "text": "Je ne prescris jamais avant d’avoir compris. Chaque mission commence par une phase de découverte approfondie : contexte, parties prenantes, données et contraintes."
+      },
+      {
+        "title": "La stratégie avant la solution",
+        "text": "Je construis d’abord la stratégie, puis je recommande des solutions qui y sont alignées. Jamais l’inverse."
+      },
+      {
+        "title": "Une valeur durable",
+        "text": "Chaque recommandation doit créer une valeur mesurable à long terme pour l’entreprise."
+      },
+      {
+        "title": "Un langage clair",
+        "text": "Des analyses complexes traduites dans un langage clair, prêt pour la décision."
+      },
+      {
+        "title": "Intégrité et objectivité",
+        "text": "Des conclusions présentées honnêtement, même lorsqu’elles dérangent. Je n’ai d’autre intérêt que la réussite du client."
+      },
+      {
+        "title": "Confidentialité",
+        "text": "Toute information client est strictement confidentielle, sauf autorisation explicite de divulgation."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Méthode",
+    "title": "Six phases, chacune close par un livrable défini.",
+    "intro": "Chaque mission suit le même cycle : l’avancement est visible et les décisions sont documentées.",
+    "activitiesLabel": "Activités clés",
+    "outputLabel": "Livrable clé",
+    "phases": [
+      {
+        "title": "Découverte et diagnostic",
+        "activities": ["Entretiens avec les parties prenantes", "Analyse du contexte", "Cadrage du problème"],
+        "outputs": ["Rapport de découverte", "Énoncé du problème"]
+      },
+      {
+        "title": "Conception de la stratégie",
+        "activities": ["Analyse de marché", "Stratégie d’entreprise", "Cartographie des opportunités"],
+        "outputs": ["Note stratégique", "Document de stratégie d’entreprise"]
+      },
+      {
+        "title": "Architecture de la solution",
+        "activities": ["Conception de la solution", "Feuille de route", "Évaluation de faisabilité"],
+        "outputs": ["Cadre de solution", "Business case"]
+      },
+      {
+        "title": "Planification et alignement",
+        "activities": ["Découpage du travail", "Priorisation", "Alignement des parties prenantes"],
+        "outputs": ["Plan de projet", "Guide d’alignement", "Matrice RACI"]
+      },
+      {
+        "title": "Exécution et pilotage",
+        "activities": ["Appui à la mise en œuvre", "Animation des sprints", "Suivi de l’avancement"],
+        "outputs": ["Rapports d’avancement", "Tableaux de bord"]
+      },
+      {
+        "title": "Revue et optimisation",
+        "activities": ["Revue des KPI", "Retour d’expérience", "Amélioration continue"],
+        "outputs": ["Rapport de performance", "Plan d’optimisation"]
+      }
+    ],
+    "agile": {
+      "title": "Agile / Scrum, lorsque c’est pertinent",
+      "text": "Pour le développement de produit, la transformation digitale et les autres missions itératives, j’applique Scrum : sprints définis, priorisation du backlog, revues de sprint et rétrospectives. En tant que Product Owner ou Scrum Coach, je maintiens le backlog aligné sur la valeur métier et la stratégie."
+    }
+  },
+  "clients": {
+    "eyebrow": "Clients",
+    "title": "Je travaille avec les responsables du résultat.",
+    "intro": "De la première entreprise à l’organisation en transformation, au Cameroun, en Afrique et au-delà.",
+    "rows": [
+      { "label": "Profil", "value": "Fondateurs indépendants, startups et PME (priorité) · Grandes entreprises · Secteur public" },
+      { "label": "Géographie", "value": "Cameroun et Afrique subsaharienne (priorité) · Clients internationaux" },
+      { "label": "Interlocuteurs", "value": "Administrateurs et direction générale (DG, CTO, DAF, COO) · Directeurs exécutifs" },
+      { "label": "Modèle d’affaires", "value": "B2B et B2C · Entreprises de produits et de services" }
+    ],
+    "maturity": {
+      "label": "Stade de l’entreprise",
+      "steps": ["Pré-revenu", "Croissance", "Maturité", "Transformation"]
+    }
+  },
+  "deliverables": {
+    "eyebrow": "Livrables",
+    "title": "Des documents conçus pour les décideurs.",
+    "intro": "La conclusion d’abord, une structure claire, et un document utilisable sans retouche.",
+    "items": [
+      {
+        "title": "Propositions et rapports d’affaires",
+        "text": "Synthèse exécutive, sections structurées, recommandations claires."
+      },
+      {
+        "title": "Présentations",
+        "text": "Un récit, des visuels d’abord, une seule idée par diapositive."
+      },
+      {
+        "title": "Études de marché et de concurrence",
+        "text": "Des analyses éclairantes, fondées sur les données, qui débouchent sur l’action."
+      },
+      {
+        "title": "Documents de planification et d’alignement",
+        "text": "Périmètre clair, jalons, matrice RACI, risques signalés dès le départ."
+      },
+      {
+        "title": "Graphiques et matrices",
+        "text": "RACI, feuilles de route, Gantt, matrices de priorisation et Kanban."
+      },
+      {
+        "title": "Guides de communication stratégique",
+        "text": "Cadres de messages, éléments de langage et protocoles d’escalade."
+      },
+      {
+        "title": "Listes de travaux priorisées",
+        "text": "Pondération MoSCoW ou WSJF, responsable désigné et échéance claire."
+      }
+    ],
+    "standardsTitle": "Les standards de chaque document",
+    "standards": [
+      "La recommandation d’abord. Tout document formel s’ouvre sur une synthèse exécutive.",
+      "Chaque recommandation est rattachée à la stratégie du client et précise son impact attendu sur l’activité.",
+      "L’impact est chiffré dès que les données le permettent : pourcentages, délais, revenus et coûts.",
+      "Les recherches citent leurs sources, signalent la qualité des données et distinguent les faits des estimations.",
+      "Relecture rigoureuse, tolérance zéro pour les fautes. Livraison en anglais, ou en français pour les clients francophones."
+    ]
+  },
+  "terms": {
+    "eyebrow": "Cadre de travail",
+    "title": "Comment une mission est encadrée.",
+    "intro": "Des conditions claires dès le départ, et une position claire sur l’IA.",
+    "engagementTitle": "Conditions d’engagement",
+    "engagement": [
+      "Le périmètre, les honoraires et les livrables sont convenus par écrit avant tout démarrage.",
+      "Tout conflit d’intérêts est signalé avant l’acceptation d’une mission.",
+      "Les informations client sont strictement confidentielles et ne sont jamais communiquées à des tiers sans consentement écrit.",
+      "Les travaux réalisés pour un client ne sont publiés qu’avec son accord écrit.",
+      "Je respecte les lois et règlements applicables au Cameroun, en Afrique et à l’international.",
+      "Mes évaluations sont honnêtes : je signale les incertitudes et ne promets jamais plus que mes capacités ou les résultats ne le permettent."
+    ],
+    "ai": {
+      "title": "Assisté par l’IA. Validé par l’humain.",
+      "text": "L’IA est un partenaire de travail très performant dans ma pratique, pas un substitut au jugement stratégique.",
+      "points": [
+        "Elle accélère la synthèse de recherches, la rédaction, la structuration et l’analyse.",
+        "Chaque production assistée par l’IA est relue, affinée et validée par mes soins avant d’arriver chez un client.",
+        "Les données client sont anonymisées ou traitées dans le cadre de conditions de confidentialité applicables avant tout usage d’un outil d’IA.",
+        "Votre contexte et ma connaissance du marché local priment toujours sur une réponse d’IA générique."
+      ]
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Commençons par le problème.",
+    "text": "Décrivez le problème d’entreprise, la décision qui vous attend ou l’ambition que vous souhaitez concrétiser. Nous partirons du diagnostic.",
+    "emailLabel": "Écrivez-moi",
+    "mailSubject": "Demande de mission",
+    "mailBody": "Contexte (une ou deux phrases) :\n\nCe dont j’ai besoin :\n\nÉchéance et prochaine étape souhaitée :\n",
+    "mailCta": "Envoyer un e-mail",
+    "details": [
+      { "label": "Localisation", "value": "Douala, Cameroun" },
+      { "label": "Langues de travail", "value": "Anglais · Français" },
+      { "label": "Marchés", "value": "Afrique et international" }
+    ]
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "line": "Consultant indépendant · Douala, Cameroun"
+  }
+}
