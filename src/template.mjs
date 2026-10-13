@@ -9,12 +9,14 @@ const esc = (s) =>
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 
-// Escapes, then turns *word* into <em>word</em> (used for headline emphasis).
+// Escapes, then turns *word* into <em>word</em> (italic accent in headlines).
 const rich = (s) => esc(s).replace(/\*([^*]+)\*/g, '<em>$1</em>');
 
-const num = (i) => String(i + 1).padStart(2, '0');
+const pad = (i) => String(i).padStart(2, '0');
+const ROMAN = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x', 'xi', 'xii'];
+const roman = (i) => ROMAN[i] ?? String(i + 1);
 
-// "A · B · C" -> three stacked lines (avoids a dangling separator when the value wraps).
+// "A · B · C" -> stacked lines (avoids a dangling separator when the value wraps).
 const lines = (v) =>
   String(v)
     .split(' · ')
@@ -88,7 +90,7 @@ function head(c, ctx) {
   <title>${esc(c.meta.title)}</title>
   <meta name="description" content="${esc(c.meta.description)}">
   <meta name="author" content="${esc(c.person.name)}">
-  <meta name="theme-color" content="#F7F4EE">
+  <meta name="theme-color" content="#EFE8DA">
   <meta name="color-scheme" content="light">${hreflangs}${og}
   <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml">
   <link rel="preload" href="${prefix}fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -123,7 +125,7 @@ function header(c, ctx) {
           <span class="lang__item is-current" aria-current="true">${esc(ui.thisLang.short)}</span>
           <a class="lang__item" href="${esc(ctx.altHref)}" hreflang="${esc(ui.otherLang.code)}" lang="${esc(ui.otherLang.code)}" aria-label="${esc(ui.otherLang.aria)}">${esc(ui.otherLang.short)}</a>
         </div>
-        <a class="btn btn--primary btn--sm nav__cta" href="#${esc(nav.cta.id)}">${esc(nav.cta.label)}</a>
+        <a class="btn btn--ink btn--sm nav__cta" href="#${esc(nav.cta.id)}">${esc(nav.cta.label)}</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="nav-toggle__bars" aria-hidden="true"></span>
           <span class="nav-toggle__label">${esc(ui.menu)}</span>
@@ -133,33 +135,47 @@ function header(c, ctx) {
   </header>`;
 }
 
+// Circular text stamp. Decorative: the same words are already in the eyebrow.
+function stamp(c) {
+  const ring = `${c.hero.eyebrow} · `.toLocaleUpperCase(c.lang);
+  return `<svg class="stamp" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+          <defs><path id="stamp-ring" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs>
+          <circle class="stamp__edge" cx="80" cy="80" r="75"/>
+          <g class="stamp__spin"><text class="stamp__text"><textPath href="#stamp-ring" textLength="356" lengthAdjust="spacing">${esc(ring)}</textPath></text></g>
+          <text class="stamp__mono" x="80" y="93" text-anchor="middle">${esc(c.person.initials)}</text>
+        </svg>`;
+}
+
 function hero(c) {
   const h = c.hero;
+  const title = h.headline
+    .split('|')
+    .map((l, i) => `<span class="hl hl${i + 1}">${rich(l)}</span>`)
+    .join(' ');
   const glance = h.glance.items
     .map((i) => `<div class="glance__row"><dt>${esc(i.label)}</dt><dd>${lines(i.value)}</dd></div>`)
-    .join('\n          ');
+    .join('\n            ');
   const method = h.method
-    .map((m, i) => `<li><span class="method__n" aria-hidden="true">${num(i)}</span>${esc(m)}</li>`)
+    .map((m, i) => `<li><span class="method__n" aria-hidden="true">${pad(i + 1)}</span>${esc(m)}</li>`)
     .join('\n            ');
   return `<section class="hero" id="top">
-      <div class="container">
-        <div class="hero__grid">
-          <div class="hero__main">
-            <p class="eyebrow">${esc(h.eyebrow)}</p>
-            <h1 class="hero__title">${rich(h.headline)}</h1>
-            <p class="lede">${esc(h.lede)}</p>
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="#${esc(h.ctaPrimary.id)}">${esc(h.ctaPrimary.label)} ${arrowIcon}</a>
-              <a class="btn btn--ghost" href="#${esc(h.ctaSecondary.id)}">${esc(h.ctaSecondary.label)}</a>
-            </div>
+      <div class="container hero__wrap">
+        <p class="eyebrow hero__eyebrow">${esc(h.eyebrow)}</p>
+        <h1 class="hero__title">${title}</h1>
+        ${stamp(c)}
+        <div class="hero__copy">
+          <p class="lede">${esc(h.lede)}</p>
+          <div class="hero__actions">
+            <a class="btn btn--vermilion" href="#${esc(h.ctaPrimary.id)}">${esc(h.ctaPrimary.label)} ${arrowIcon}</a>
+            <a class="btn btn--line" href="#${esc(h.ctaSecondary.id)}">${esc(h.ctaSecondary.label)}</a>
           </div>
-          <aside class="glance" aria-labelledby="glance-title">
-            <h2 class="glance__title" id="glance-title">${esc(h.glance.title)}</h2>
-            <dl class="glance__list">
-            ${glance}
-            </dl>
-          </aside>
         </div>
+        <aside class="glance" aria-labelledby="glance-title">
+          <h2 class="glance__title" id="glance-title">${esc(h.glance.title)}</h2>
+          <dl class="glance__list">
+            ${glance}
+          </dl>
+        </aside>
         <div class="method">
           <p class="method__label" id="method-label">${esc(h.methodLabel)}</p>
           <ol class="method__list" aria-labelledby="method-label">
@@ -174,37 +190,43 @@ function brief(c) {
   const items = c.brief.items
     .map(
       (i) => `<li class="brief__item">
-            <h3>${esc(i.title)}</h3>
-            <p>${esc(i.text)}</p>
-          </li>`,
+              <h3>${esc(i.title)}</h3>
+              <p>${esc(i.text)}</p>
+            </li>`,
     )
-    .join('\n          ');
+    .join('\n            ');
   return `<section class="brief" aria-label="${esc(c.brief.label)}">
-      <div class="container">
+      <div class="container brief__wrap">
         <p class="brief__label">${esc(c.brief.label)}</p>
-        <ul class="brief__grid">
-          ${items}
+        <ul class="brief__list">
+            ${items}
         </ul>
       </div>
     </section>`;
 }
 
-function sectionHead(s, id) {
-  return `<header class="section-head" data-reveal>
-          <p class="eyebrow">${esc(s.eyebrow)}</p>
-          <h2 id="${id}-title">${esc(s.title)}</h2>
-          ${s.intro ? `<p class="section-head__intro">${esc(s.intro)}</p>` : ''}
+function sectionHead(s, id, ctx) {
+  const m = ctx.marks[id];
+  return `<header class="shead" data-reveal>
+          <p class="shead__mark" aria-hidden="true"><span>${pad(m.n)}</span><i></i><span>${pad(m.total)}</span></p>
+          <div class="shead__body">
+            <p class="eyebrow">${esc(s.eyebrow)}</p>
+            <h2 id="${id}-title">${rich(s.title)}</h2>
+            ${s.intro ? `<p class="shead__intro">${esc(s.intro)}</p>` : ''}
+          </div>
         </header>`;
 }
 
-function expertise(c) {
+function expertise(c, ctx) {
   const e = c.expertise;
   const pillars = e.pillars
     .map(
       (p, i) => `<article class="pillar" data-reveal>
-            <p class="pillar__num">${num(i)}</p>
-            <h3 class="pillar__name">${esc(p.name)}</h3>
-            <p class="pillar__tag">${esc(p.tagline)}</p>
+            <div class="pillar__head">
+              <p class="pillar__num">${pad(i + 1)}</p>
+              <h3 class="pillar__name">${esc(p.name)}</h3>
+              <p class="pillar__tag">${esc(p.tagline)}</p>
+            </div>
             <ul class="domains">
               ${p.items
                 .map(
@@ -220,7 +242,7 @@ function expertise(c) {
     .join('\n          ');
   return `<section class="section" id="expertise" aria-labelledby="expertise-title">
       <div class="container">
-        ${sectionHead(e, 'expertise')}
+        ${sectionHead(e, 'expertise', ctx)}
         <div class="pillars">
           ${pillars}
         </div>
@@ -228,12 +250,12 @@ function expertise(c) {
     </section>`;
 }
 
-function industries(c) {
+function industries(c, ctx) {
   const s = c.industries;
-  return `<section class="section section--alt" id="industries" aria-labelledby="industries-title">
+  return `<section class="section section--sand cut" id="industries" aria-labelledby="industries-title">
       <div class="container">
-        ${sectionHead(s, 'industries')}
-        <ul class="chips" data-reveal>
+        ${sectionHead(s, 'industries', ctx)}
+        <ul class="runin" data-reveal>
           ${s.items.map((i) => `<li>${esc(i)}</li>`).join('\n          ')}
         </ul>
       </div>
@@ -242,10 +264,11 @@ function industries(c) {
 
 function statement(c) {
   const s = c.statement;
-  return `<section class="section section--dark statement" aria-label="${esc(s.eyebrow)}">
+  return `<section class="section section--verm cut statement" aria-label="${esc(s.eyebrow)}">
       <div class="container">
-        <figure class="statement__figure" data-reveal>
-          <p class="eyebrow eyebrow--light">${esc(s.eyebrow)}</p>
+        <figure class="statement__fig" data-reveal>
+          <span class="statement__mark" aria-hidden="true">&ldquo;</span>
+          <p class="eyebrow">${esc(s.eyebrow)}</p>
           <blockquote class="statement__quote"><p>${esc(s.quote)}</p></blockquote>
           <figcaption class="statement__by">${esc(s.attribution)}</figcaption>
         </figure>
@@ -253,12 +276,12 @@ function statement(c) {
     </section>`;
 }
 
-function approach(c) {
+function approach(c, ctx) {
   const a = c.approach;
   const items = a.principles
     .map(
       (p, i) => `<li class="principle" data-reveal>
-            <span class="principle__num" aria-hidden="true">${num(i)}</span>
+            <span class="principle__no" aria-hidden="true">${roman(i)}</span>
             <h3>${esc(p.title)}</h3>
             <p>${esc(p.text)}</p>
           </li>`,
@@ -266,7 +289,7 @@ function approach(c) {
     .join('\n          ');
   return `<section class="section" id="approach" aria-labelledby="approach-title">
       <div class="container">
-        ${sectionHead(a, 'approach')}
+        ${sectionHead(a, 'approach', ctx)}
         <ol class="principles">
           ${items}
         </ol>
@@ -274,12 +297,12 @@ function approach(c) {
     </section>`;
 }
 
-function process(c) {
+function process(c, ctx) {
   const p = c.process;
   const phases = p.phases
     .map(
       (ph, i) => `<li class="phase" data-reveal>
-            <span class="phase__n" aria-hidden="true">${num(i)}</span>
+            <span class="phase__n" aria-hidden="true">${roman(i)}</span>
             <div class="phase__body">
               <h3>${esc(ph.title)}</h3>
               <p class="phase__label">${esc(p.activitiesLabel)}</p>
@@ -296,9 +319,9 @@ function process(c) {
           </li>`,
     )
     .join('\n          ');
-  return `<section class="section section--dark" id="process" aria-labelledby="process-title">
+  return `<section class="section section--forest cut" id="process" aria-labelledby="process-title">
       <div class="container">
-        ${sectionHead(p, 'process')}
+        ${sectionHead(p, 'process', ctx)}
         <div class="phases-head" aria-hidden="true">
           <span></span><span>${esc(p.activitiesLabel)}</span><span>${esc(p.outputLabel)}</span>
         </div>
@@ -313,7 +336,7 @@ function process(c) {
     </section>`;
 }
 
-function engagements(c) {
+function engagements(c, ctx) {
   const e = c.engagements;
   if (!e || !e.items || !e.items.length) return '';
   const cards = e.items
@@ -331,7 +354,7 @@ function engagements(c) {
     .join('\n          ');
   return `<section class="section" id="engagements" aria-labelledby="engagements-title">
       <div class="container">
-        ${sectionHead(e, 'engagements')}
+        ${sectionHead(e, 'engagements', ctx)}
         <div class="cases">
           ${cards}
         </div>
@@ -339,21 +362,24 @@ function engagements(c) {
     </section>`;
 }
 
-function clients(c) {
+function clients(c, ctx) {
   const s = c.clients;
   const rows = s.rows
     .map((r) => `<div class="facts__row"><dt>${esc(r.label)}</dt><dd>${lines(r.value)}</dd></div>`)
     .join('\n            ');
-  const steps = s.maturity.steps.map((m) => `<li>${esc(m)}</li>`).join('\n              ');
-  return `<section class="section section--alt" id="clients" aria-labelledby="clients-title">
+  const steps = s.maturity.steps.map((m) => `<li><span>${esc(m)}</span></li>`).join('\n              ');
+  return `<section class="section section--sand cut" id="clients" aria-labelledby="clients-title">
       <div class="container">
-        ${sectionHead(s, 'clients')}
-        <div class="clients__grid">
-          <dl class="facts" data-reveal>
+        ${sectionHead(s, 'clients', ctx)}
+        <dl class="facts" data-reveal>
             ${rows}
-          </dl>
-          <div class="maturity" data-reveal>
-            <p class="maturity__label">${esc(s.maturity.label)}</p>
+        </dl>
+        <div class="maturity" data-reveal>
+          <p class="maturity__label">${esc(s.maturity.label)}</p>
+          <div class="maturity__plot">
+            <svg class="maturity__curve" viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M 30 208 C 120 206, 215 170, 320 156 S 520 118, 620 99 S 860 52, 960 26"/>
+            </svg>
             <ol class="maturity__steps">
               ${steps}
             </ol>
@@ -363,20 +389,21 @@ function clients(c) {
     </section>`;
 }
 
-function deliverables(c) {
+function deliverables(c, ctx) {
   const d = c.deliverables;
   const items = d.items
     .map(
-      (i) => `<li class="deliv__item">
+      (i, n) => `<li class="deliv__item">
+              <span class="deliv__k" aria-hidden="true">${String.fromCharCode(97 + n)}</span>
               <h3>${esc(i.title)}</h3>
               <p>${esc(i.text)}</p>
             </li>`,
     )
     .join('\n            ');
   const standards = d.standards.map((s) => `<li>${esc(s)}</li>`).join('\n              ');
-  return `<section class="section" id="deliverables" aria-labelledby="deliverables-title">
+  return `<section class="section deliverables" id="deliverables" aria-labelledby="deliverables-title">
       <div class="container">
-        ${sectionHead(d, 'deliverables')}
+        ${sectionHead(d, 'deliverables', ctx)}
         <div class="deliv__grid">
           <ul class="deliv" data-reveal>
             ${items}
@@ -392,11 +419,11 @@ function deliverables(c) {
     </section>`;
 }
 
-function terms(c) {
+function terms(c, ctx) {
   const t = c.terms;
-  return `<section class="section section--alt" id="terms" aria-labelledby="terms-title">
+  return `<section class="section section--sand cut terms" id="terms" aria-labelledby="terms-title">
       <div class="container">
-        ${sectionHead(t, 'terms')}
+        ${sectionHead(t, 'terms', ctx)}
         <ul class="checks" data-reveal>
           ${t.engagement.map((x) => `<li>${esc(x)}</li>`).join('\n          ')}
         </ul>
@@ -404,32 +431,33 @@ function terms(c) {
     </section>`;
 }
 
-function contact(c) {
+function contact(c, ctx) {
   const k = c.contact;
+  const m = ctx.marks.contact;
   const body = k.mailBody.replace(/\n/g, '\r\n');
   const href = `mailto:${c.person.email}?subject=${encodeURIComponent(k.mailSubject)}&body=${encodeURIComponent(body)}`;
   const details = k.details
     .map((d) => `<div><dt>${esc(d.label)}</dt><dd>${esc(d.value)}</dd></div>`)
     .join('\n            ');
-  return `<section class="section section--dark contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact__grid">
-        <div class="contact__main" data-reveal>
-          <p class="eyebrow eyebrow--light">${esc(k.eyebrow)}</p>
-          <h2 id="contact-title">${esc(k.title)}</h2>
-          <p class="section-head__intro">${esc(k.text)}</p>
+  return `<section class="section section--forest cut contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__wrap">
+        <p class="shead__mark" aria-hidden="true"><span>${pad(m.n)}</span><i></i><span>${pad(m.total)}</span></p>
+        <div class="contact__head" data-reveal>
+          <p class="eyebrow">${esc(k.eyebrow)}</p>
+          <h2 id="contact-title">${rich(k.title)}</h2>
         </div>
-        <div class="contact__card" data-reveal>
-          <p class="contact__label">${esc(k.emailLabel)}</p>
-          <p class="contact__email"><a href="mailto:${esc(c.person.email)}" id="contact-email">${esc(c.person.email)}</a></p>
+        <p class="contact__email" data-reveal><a href="mailto:${esc(c.person.email)}" id="contact-email">${esc(c.person.email)}</a></p>
+        <div class="contact__text" data-reveal>
+          <p class="shead__intro">${esc(k.text)}</p>
           <div class="contact__actions">
-            <a class="btn btn--accent" href="${esc(href)}">${esc(k.mailCta)} ${arrowIcon}</a>
-            <button class="btn btn--outline-light" type="button" id="copy-email" data-email="${esc(c.person.email)}" data-copied="${esc(c.ui.copied)}" data-failed="${esc(c.ui.copyFailed)}">${copyIcon}<span>${esc(c.ui.copy)}</span></button>
+            <a class="btn btn--ochre" href="${esc(href)}">${esc(k.mailCta)} ${arrowIcon}</a>
+            <button class="btn btn--line-light" type="button" id="copy-email" data-email="${esc(c.person.email)}" data-copied="${esc(c.ui.copied)}" data-failed="${esc(c.ui.copyFailed)}">${copyIcon}<span>${esc(c.ui.copy)}</span></button>
           </div>
           <p class="sr-only" role="status" aria-live="polite" id="copy-status"></p>
-          <dl class="contact__details">
-            ${details}
-          </dl>
         </div>
+        <dl class="contact__details" data-reveal>
+            ${details}
+        </dl>
       </div>
     </section>`;
 }
@@ -445,6 +473,21 @@ function footer(c, ctx) {
 }
 
 export function renderPage(c, ctx) {
+  // Section numbering ("02 / 08") follows whichever sections are actually present.
+  const order = [
+    'expertise',
+    'industries',
+    'approach',
+    'process',
+    ...(c.engagements && c.engagements.items && c.engagements.items.length ? ['engagements'] : []),
+    'clients',
+    'deliverables',
+    'terms',
+    'contact',
+  ];
+  const marks = Object.fromEntries(order.map((k, i) => [k, { n: i + 1, total: order.length }]));
+  const x = { ...ctx, marks };
+
   return `<!doctype html>
 <html lang="${esc(c.lang)}">
 ${head(c, ctx)}
@@ -454,16 +497,16 @@ ${head(c, ctx)}
   <main id="main">
     ${hero(c)}
     ${brief(c)}
-    ${expertise(c)}
-    ${industries(c)}
+    ${expertise(c, x)}
+    ${industries(c, x)}
     ${statement(c)}
-    ${approach(c)}
-    ${process(c)}
-    ${engagements(c)}
-    ${clients(c)}
-    ${deliverables(c)}
-    ${terms(c)}
-    ${contact(c)}
+    ${approach(c, x)}
+    ${process(c, x)}
+    ${engagements(c, x)}
+    ${clients(c, x)}
+    ${deliverables(c, x)}
+    ${terms(c, x)}
+    ${contact(c, x)}
   </main>
   ${footer(c, ctx)}
   <script src="${ctx.prefix}assets/${ctx.assets.js}" defer></script>

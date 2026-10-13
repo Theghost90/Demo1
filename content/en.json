@@ -42,7 +42,7 @@
   },
   "hero": {
     "eyebrow": "Independent Business Consultant · Douala, Cameroon",
-    "headline": "I turn ambiguous business problems into *executable strategy.*",
+    "headline": "I turn ambiguous|business problems into|*executable strategy.*",
     "lede": "I advise founders, SMEs, enterprises and public-sector leaders in strategy, digital transformation and finance. I define the real problem first, build the strategy second, then recommend solutions, with or without technology, that create lasting value.",
     "ctaPrimary": { "label": "Discuss an engagement", "id": "contact" },
     "ctaSecondary": { "label": "See how I work", "id": "process" },
@@ -78,7 +78,7 @@
   },
   "expertise": {
     "eyebrow": "Expertise",
-    "title": "Nine domains, organized around three questions.",
+    "title": "Nine domains, organized around *three questions.*",
     "intro": "Where should the business go? How is the ambition funded and structured? How does the strategy get built, run and sold?",
     "pillars": [
       {
@@ -139,7 +139,7 @@
   },
   "industries": {
     "eyebrow": "Industries",
-    "title": "Eleven sectors, one consistent method.",
+    "title": "Eleven sectors, *one consistent method.*",
     "intro": "Sector context shapes the diagnosis. It never replaces it.",
     "items": [
       "Technology & Communications",
@@ -162,7 +162,7 @@
   },
   "approach": {
     "eyebrow": "Approach",
-    "title": "Six principles on every engagement.",
+    "title": "Six principles on *every engagement.*",
     "intro": "They apply whatever the sector, and whatever the size of the client.",
     "principles": [
       {
@@ -193,7 +193,7 @@
   },
   "process": {
     "eyebrow": "Process",
-    "title": "Six phases, each ending in a defined deliverable.",
+    "title": "Six phases, each ending in *a defined deliverable.*",
     "intro": "Every engagement follows the same lifecycle, so progress is visible and decisions are documented.",
     "activitiesLabel": "Key activities",
     "outputLabel": "Key output",
@@ -236,7 +236,7 @@
   },
   "clients": {
     "eyebrow": "Clients",
-    "title": "I work with the people accountable for the outcome.",
+    "title": "I work with the people *accountable for the outcome.*",
     "intro": "From a first venture to a business in transformation, in Cameroon, across Africa and beyond.",
     "rows": [
       { "label": "Segment", "value": "Solo founders, startups and SMEs (primary) · Large enterprises · Public sector" },
@@ -251,7 +251,7 @@
   },
   "deliverables": {
     "eyebrow": "Deliverables",
-    "title": "Documents built for decision-makers.",
+    "title": "Documents built for *decision-makers.*",
     "intro": "Conclusion first, clearly structured, and ready to use without rework.",
     "items": [
       {
@@ -268,19 +268,15 @@
       },
       {
         "title": "Planning & alignment documents",
-        "text": "Clear scope, milestones, RACI, and risks flagged early."
-      },
-      {
-        "title": "Visual charts & matrices",
-        "text": "RACI, roadmaps, Gantt, prioritization matrices and Kanban."
+        "text": "A clear scope, agreed milestones, defined responsibilities and risks flagged early."
       },
       {
         "title": "Strategic communication guides",
-        "text": "Messaging frameworks, talking points and escalation protocols."
+        "text": "Core messages, talking points and escalation protocols."
       },
       {
         "title": "Prioritized work lists",
-        "text": "MoSCoW or WSJF-weighted, with an owner assigned and a clear deadline."
+        "text": "Every item ranked by value and effort, with a named owner and a firm deadline."
       }
     ],
     "standardsTitle": "Standards every document meets",
@@ -294,7 +290,7 @@
   },
   "terms": {
     "eyebrow": "Working terms",
-    "title": "How an engagement is governed.",
+    "title": "How an engagement is *governed.*",
     "intro": "Clear terms up front, so every engagement starts on the same footing.",
     "engagement": [
       "Scope, fees and deliverables are agreed in writing before any work begins.",
@@ -307,7 +303,7 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Let’s start with the problem.",
+    "title": "Let’s start with *the problem.*",
     "text": "Describe the business problem, the decision in front of you, or the ambition you want to pursue. We start with the diagnosis.",
     "emailLabel": "Write to me",
     "mailSubject": "Engagement inquiry",

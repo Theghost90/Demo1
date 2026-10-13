@@ -24,3 +24,18 @@ optional `engagements` block (see README) and only with the client's written con
 
 English is the default; French is the second language. Keep `content/en.json` and `content/fr.json` structurally
 identical (the build enforces it). Use American spelling, matching the source document.
+
+## 4. Deliverables copy names no tools, frameworks or matrices (owner instruction)
+
+In the Deliverables section, describe what the client receives in plain language. Do not name the tools, frameworks or
+matrices used to produce it (for example no RACI, Gantt, Kanban, MoSCoW or WSJF). There is no "charts and matrices" row.
+Open question for the owner: whether the same rule applies to the Process section (it lists "RACI", "Roadmap", "Solution
+Framework", "Sprint facilitation") and to the Agile / Scrum wording in the Product Ownership domain and the process note.
+Do not change those until he decides.
+
+## 5. Design direction (owner request)
+
+Sophisticated and editorial, in the spirit of a high-end creative agency, not a corporate template. Asymmetric layouts,
+flat colour only (no gradients), hand-crafted details. Keep it light and legible: no photographs, no heavy animation,
+readable on a phone over mobile data, WCAG AA contrast, content never hidden without JavaScript.
+The hand-drawn details are SVG masks defined as `--shape-*` variables at the top of `src/styles.css`.

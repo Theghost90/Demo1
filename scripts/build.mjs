@@ -150,7 +150,7 @@ await writeFile(
     <p class="eyebrow">404</p>
     <h1>Page not found.</h1>
     <p>Page introuvable.</p>
-    <p><a class="btn btn--primary" href="/">English</a> <a class="btn btn--ghost" href="/fr/">Français</a></p>
+    <p><a class="btn btn--ink" href="/">English</a> <a class="btn btn--line" href="/fr/">Français</a></p>
   </main>
 </body>
 </html>

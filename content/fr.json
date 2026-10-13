@@ -42,7 +42,7 @@
   },
   "hero": {
     "eyebrow": "Consultant indépendant · Douala, Cameroun",
-    "headline": "Je transforme des problématiques d’entreprise ambiguës en *stratégie exécutable.*",
+    "headline": "Je transforme|des problématiques|d’entreprise ambiguës|en *stratégie exécutable.*",
     "lede": "J’accompagne fondateurs, PME, grandes entreprises et dirigeants du secteur public en stratégie, transformation digitale et finance. Je définis d’abord le véritable problème, je construis ensuite la stratégie, puis je recommande des solutions, avec ou sans technologie, qui créent une valeur durable.",
     "ctaPrimary": { "label": "Discuter d’une mission", "id": "contact" },
     "ctaSecondary": { "label": "Voir ma méthode", "id": "process" },
@@ -78,7 +78,7 @@
   },
   "expertise": {
     "eyebrow": "Expertise",
-    "title": "Neuf domaines, organisés autour de trois questions.",
+    "title": "Neuf domaines, organisés autour de *trois questions.*",
     "intro": "Où l’entreprise doit-elle aller ? Comment l’ambition est-elle financée et structurée ? Comment la stratégie se construit-elle, s’exploite-t-elle et se vend-elle ?",
     "pillars": [
       {
@@ -139,7 +139,7 @@
   },
   "industries": {
     "eyebrow": "Secteurs",
-    "title": "Onze secteurs, une seule méthode.",
+    "title": "Onze secteurs, *une seule méthode.*",
     "intro": "Le contexte sectoriel nourrit le diagnostic. Il ne s’y substitue jamais.",
     "items": [
       "Technologie et communications",
@@ -162,7 +162,7 @@
   },
   "approach": {
     "eyebrow": "Approche",
-    "title": "Six principes dans chaque mission.",
+    "title": "Six principes dans *chaque mission.*",
     "intro": "Ils s’appliquent quel que soit le secteur, et quelle que soit la taille du client.",
     "principles": [
       {
@@ -193,7 +193,7 @@
   },
   "process": {
     "eyebrow": "Méthode",
-    "title": "Six phases, chacune close par un livrable défini.",
+    "title": "Six phases, chacune close par *un livrable défini.*",
     "intro": "Chaque mission suit le même cycle : l’avancement est visible et les décisions sont documentées.",
     "activitiesLabel": "Activités clés",
     "outputLabel": "Livrable clé",
@@ -236,7 +236,7 @@
   },
   "clients": {
     "eyebrow": "Clients",
-    "title": "Je travaille avec les responsables du résultat.",
+    "title": "Je travaille avec *les responsables du résultat.*",
     "intro": "De la première entreprise à l’organisation en transformation, au Cameroun, en Afrique et au-delà.",
     "rows": [
       { "label": "Profil", "value": "Fondateurs indépendants, startups et PME (priorité) · Grandes entreprises · Secteur public" },
@@ -251,7 +251,7 @@
   },
   "deliverables": {
     "eyebrow": "Livrables",
-    "title": "Des documents conçus pour les décideurs.",
+    "title": "Des documents conçus pour *les décideurs.*",
     "intro": "La conclusion d’abord, une structure claire, et un document utilisable sans retouche.",
     "items": [
       {
@@ -268,19 +268,15 @@
       },
       {
         "title": "Documents de planification et d’alignement",
-        "text": "Périmètre clair, jalons, matrice RACI, risques signalés dès le départ."
-      },
-      {
-        "title": "Graphiques et matrices",
-        "text": "RACI, feuilles de route, Gantt, matrices de priorisation et Kanban."
+        "text": "Un périmètre clair, des jalons convenus, des responsabilités définies et les risques signalés dès le départ."
       },
       {
         "title": "Guides de communication stratégique",
-        "text": "Cadres de messages, éléments de langage et protocoles d’escalade."
+        "text": "Messages clés, éléments de langage et protocoles d’escalade."
       },
       {
         "title": "Listes de travaux priorisées",
-        "text": "Pondération MoSCoW ou WSJF, responsable désigné et échéance claire."
+        "text": "Chaque élément classé selon sa valeur et son effort, avec un responsable désigné et une échéance ferme."
       }
     ],
     "standardsTitle": "Les standards de chaque document",
@@ -294,7 +290,7 @@
   },
   "terms": {
     "eyebrow": "Cadre de travail",
-    "title": "Comment une mission est encadrée.",
+    "title": "Comment une mission est *encadrée.*",
     "intro": "Des conditions claires dès le départ, pour que chaque mission démarre sur des bases communes.",
     "engagement": [
       "Le périmètre, les honoraires et les livrables sont convenus par écrit avant tout démarrage.",
@@ -307,7 +303,7 @@
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Commençons par le problème.",
+    "title": "Commençons par *le problème.*",
     "text": "Décrivez le problème d’entreprise, la décision qui vous attend ou l’ambition que vous souhaitez concrétiser. Nous partirons du diagnostic.",
     "emailLabel": "Écrivez-moi",
     "mailSubject": "Demande de mission",
